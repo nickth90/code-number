@@ -1,0 +1,10 @@
+.centered > div {
+  top:40px;
+}
+
+  .centered > div {
+    float: none;
+    display: inline-block;
+    text-align: left;
+    font-size: 13px;
+}
