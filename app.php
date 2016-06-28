@@ -1,6 +1,9 @@
 <?php
+set_time_limit(60);
+error_reporting(0);
+
 $number = "";
-$number = $_POST['number'];
+$number = $_GET['number'];
 $array = array();
 $data = array();
 $array[2] = ["a","b","c"];
@@ -41,13 +44,23 @@ for($i=0;$i<count($test_data);$i++){
 		}
 	}
 
-	for($n=0;$n<count($result);$n++){
-		 if(find_dict($result[$n]) == true){
-		 	array_push($data, array(
-        "match" => $result[$n]));
-      //echo $result[$n]."<br>";
-    	}
-	}
+
+try{
+    for($n=0;$n<count($result);$n++){
+     if(find_dict($result[$n]) == true){
+        array_push($data, array(
+          "match" => $result[$n]));
+        //echo $result[$n]."<br>";
+      }
+    }
+}
+catch(Exception $e) {
+   array_push($data, array(
+    "match" => $e->getMessage()));
+  echo json_encode($data);
+  
+}
+
 
     function find_dict($string){
       $found = false;
@@ -56,7 +69,7 @@ for($i=0;$i<count($test_data);$i++){
       $file_handle = fopen("my-dict.txt", "r");
       while (!feof($file_handle)) {
          $line = fgets($file_handle);
-         if(strpos($line, $search) !== false)
+         if(strstr($line, $search) !== false)
            {
              $found = true;
             // echo $line."<br>";
