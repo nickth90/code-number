@@ -3,7 +3,7 @@ set_time_limit(60);
 error_reporting(0);
 
 $number = "";
-$number = $_GET['number'];
+$number = $_POST['number'];
 $array = array();
 $data = array();
 $array[2] = ["a","b","c"];

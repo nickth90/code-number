@@ -17491,7 +17491,6 @@ syurah
 mensyurahkan
 syurga
 syurgaloka
-
 ta
 taajal
 taakul
@@ -19262,7 +19261,6 @@ penutupan
 tutur
 bertutur
 tuwu
-
 uar
 ubah
 berubah
@@ -19533,7 +19531,6 @@ utusan
 pengutusan
 uzur
 keuzuran
-
 vagina
 vaksin
 vakum
@@ -19573,8 +19570,6 @@ video
 vietkong
 vinometer
 virus
-vis
-a
 visa
 visi
 visual
@@ -19588,7 +19583,6 @@ vokasional
 volt
 voltameter
 votum
-
 wa
 wabak
 wacana
@@ -19751,7 +19745,6 @@ xerofit
 xilem
 xilofaj
 xilofon
-
 ya
 yahudi
 memperyahudikan
@@ -19790,7 +19783,6 @@ yusir
 yut
 yuta
 yuyu
-
 za
 zabaniah
 zabur

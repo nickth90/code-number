@@ -13,7 +13,7 @@ $(document).ready(function() {
         'number' : numValue
       };
 
-       $('.output').append("<span class='col-sm-2'></span><img src='loading.gif' text-center' alt='Loader' width='32' height='32'>");
+       $('.output').append("<span class='col-sm-1'></span><img src='loading3.gif' text-center' alt='Loader' width='250' height='150'>");
 
       $.ajax({
 			type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
@@ -31,7 +31,7 @@ $(document).ready(function() {
 												var idx = 0;
 												for( var i in data) {
                               if(data[i].match === "not found")
-                                $('.output').append("<span class='well well-sm col-sm-4 text-center'>"+data[i].match+"</span>");
+                                $('.output').append("<span class='alert alert-danger col-sm-4 text-center'>"+data[i].match+"</span>");
                               else
                                 $('.output').append("<h4><span class='label label-danger'>"+data[i].match+"</span></h4>");
 															  //	$('.list').append("<li class='bg-info well well-sm'>"+data[i].match+"</li>");
@@ -40,7 +40,7 @@ $(document).ready(function() {
                     }
         else {
             $('.output').html('');
-            $('.output').append("<font color='red' class='h3'>Failed to retrieve data!</font>");
+            $('.output').append("<font color='red' class='h3 alert alert-danger'>Failed to retrieve data!</font>");
 
 					// usually after form submission, you'll want to redirect
 					// window.location = '/thank-you'; // redirect a user to another page
@@ -49,7 +49,7 @@ $(document).ready(function() {
 			/**********************************************************************************/
       .fail(function(data) {
                 $('.output').html('');
-                $('.output').append("<span class='well well-sm col-sm-4 text-center'>Failed to get response.</span>");
+                $('.output').append("<span class='alert alert-danger col-sm-4 text-center'>Failed to get response.</span>");
             });
 
       		event.preventDefault();
